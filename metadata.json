@@ -1,0 +1,6 @@
+{
+  "name": "Sukoon - 2000s Nostalgia Radio",
+  "description": "A 2000s nostalgia music radio web app featuring peaceful meadow backgrounds, curated nostalgic melodies, and seamless YouTube playlist playback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

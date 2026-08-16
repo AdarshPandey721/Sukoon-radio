@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-hindi: 'Rozha One', 'Yatra One', 'Tiro Devanagari Hindi', serif;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-hindi {
+  font-family: 'Rozha One', 'Yatra One', 'Tiro Devanagari Hindi', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Background Scene rules for Theme 1: Sukoon */
+.hero-bg-sukoon {
+  background-image: url('/bg/sukoon-wide.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+  .hero-bg-sukoon {
+    background-image: url('/bg/sukoon-tall.jpg');
+  }
+}
+
+/* Background Scene rules for Theme 2: Purane Din */
+.hero-bg-purane-din {
+  background-image: url('/bg/purane-din-wide.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+  .hero-bg-purane-din {
+    background-image: url('/bg/purane-din-tall.jpg');
+  }
+}
+
+/* Blinking colon for IST Clock */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.colon-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Smooth continuous vinyl spinning */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Custom scrollbar for song and playlist modal menus */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
